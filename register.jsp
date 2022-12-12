@@ -22,7 +22,7 @@
 <table class="pad">
 <tr><td>UserName: </td><td><input type="text" name=username></td></tr>
 <tr><td> Password: </td><td><input type="password" name=password></td></tr>
-<tr><td><input type="Submit" value="Register"></td></tr>
+<tr><td><input type="Submit" value="Register"></td><td><a href="admin.jsp"><i>goto-homepage</i></a></td></tr>
 </table>
 </form>
 </div>
