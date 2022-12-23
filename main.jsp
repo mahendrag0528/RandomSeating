@@ -15,15 +15,29 @@ try {
 	PreparedStatement ps=con.prepareStatement("select username from user");
     ResultSet res=ps.executeQuery();
     ArrayList<String> x=new ArrayList<String>();
+    int total=((int)session.getAttribute("res1"))*((int)session.getAttribute("res2"));
+    int count=0;
     while(res.next()){
-    	x.add(res.getString("username"));
+    	if(count<total)
+    	{
+    	    x.add(res.getString("username"));
+    	}
+    	else
+    		break;
+    	count+=1;
     }
     Collections.shuffle(x);
     session.setAttribute("al", x);
     int j=0;
     for(int i=1;i<=(int)session.getAttribute("res1");i++)
     {
+    	%>
+    	<br>
+    	<%
     	out.println("ROOM:"+i);
+    	%>
+    	<br>
+    	<%
     	%>
     	<br>
     	<%
